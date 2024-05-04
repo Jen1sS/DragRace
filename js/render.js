@@ -31,10 +31,14 @@ function initScene(){
     renderer.shadowMap.enabled = true;
     document.body.appendChild(renderer.domElement);
 
-    clock = new THREE.Clock();
     camera = new THREE.PerspectiveCamera(50, width/height, 0.1, 500);
     camera.position.set(0, 1.80, -5);
     camera.lookAt(0, 1.80, 10);
+
+    clock = new THREE.Clock();
+
+    scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x7faa22);
 
 
     renderer.setAnimationLoop(animate);
